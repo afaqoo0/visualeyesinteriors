@@ -220,40 +220,72 @@
       <p class="section-tag">Our portfolio</p>
       <h2 class="section-title">What we've done so far?</h2>
       
-      <div class="portfolio-tabs">
+            <div class="portfolio-tabs">
         <button class="active" onclick="filterPortfolio('all', this)">All</button>
-        <button onclick="filterPortfolio('residential', this)">Residential</button>
-        <button onclick="filterPortfolio('commercial', this)">Commercial</button>
-        <button onclick="filterPortfolio('rental', this)">Rental home</button>
-        <button onclick="filterPortfolio('food', this)">Food & beverages</button>
+        <button onclick="filterPortfolio('bedrooms', this)">Bedrooms</button>
+        <button onclick="filterPortfolio('living', this)">Living & Dining</button>
+        <button onclick="filterPortfolio('kitchen', this)">Kitchen</button>
+        <button onclick="filterPortfolio('exterior', this)">Exterior & Garden</button>
+        <button onclick="filterPortfolio('other', this)">Specialty</button>
       </div>
       
       <div class="portfolio-grid">
-        <div class="portfolio-item fade-in" data-category="residential">
-          <img src="Assets/images/exteriordesign2.png" alt="Eden House">
-          <h3>Eden house</h3>
-          <p>The canal, jumeirah 2</p>
+        <div class="portfolio-item fade-in" data-category="bedrooms">
+          <img src="Assets/images/bedrooms1.jpeg" alt="Master Bedroom">
+          <h3>Master Bedroom</h3>
+          <p>Luxury interior design</p>
         </div>
-        
-        <div class="portfolio-item fade-in" data-category="residential">
-          <img src="Assets/images/kitchen1.png" alt="Wabi Sabi">
-          <h3>Wabi sabi</h3>
-          <p>Eden valley community, dubailand</p>
+        <div class="portfolio-item fade-in" data-category="bedrooms">
+          <img src="Assets/images/bedrooms2.png" alt="Guest Bedroom">
+          <h3>Guest Bedroom</h3>
+          <p>Modern comfort</p>
         </div>
-        
-        <div class="portfolio-item fade-in" data-category="commercial">
-          <img src="Assets/images/kitchen2.png" alt="Kiddie Express">
-          <h3>Kiddie express</h3>
-          <p>Silicon central mall, dubai silicon oasis</p>
+        <div class="portfolio-item fade-in" data-category="living">
+          <img src="Assets/images/livingrooms1.png" alt="Living Room">
+          <h3>Living Room</h3>
+          <p>Elegant spaces</p>
         </div>
-        
-        <div class="portfolio-item fade-in" data-category="food">
-          <img src="Assets/images/kitchen3.png" alt="Numo Cafe">
-          <h3>Numo cafe</h3>
-          <p>Al ghubaiba rta bus station, bur dubai</p>
+        <div class="portfolio-item fade-in" data-category="living">
+          <img src="Assets/images/livinganddiningspace1.png" alt="Dining Space">
+          <h3>Dining Space</h3>
+          <p>Open concept design</p>
+        </div>
+        <div class="portfolio-item fade-in" data-category="kitchen">
+          <img src="Assets/images/kitchen1.png" alt="Modern Kitchen">
+          <h3>Modern Kitchen</h3>
+          <p>Functional aesthetics</p>
+        </div>
+        <div class="portfolio-item fade-in" data-category="kitchen">
+          <img src="Assets/images/kitchen2.png" alt="Minimalist Kitchen">
+          <h3>Minimalist Kitchen</h3>
+          <p>Clean and bright</p>
+        </div>
+        <div class="portfolio-item fade-in" data-category="exterior">
+          <img src="Assets/images/exteriordesign1.png" alt="Villa Exterior">
+          <h3>Villa Exterior</h3>
+          <p>Architectural facade</p>
+        </div>
+        <div class="portfolio-item fade-in" data-category="exterior">
+          <img src="Assets/images/smallgarden1.png" alt="Garden Landscape">
+          <h3>Small Garden</h3>
+          <p>Outdoor oasis</p>
+        </div>
+        <div class="portfolio-item fade-in" data-category="other">
+          <img src="Assets/images/boysbedcartheme1.jpg" alt="Kids Room">
+          <h3>Kids Car Theme</h3>
+          <p>Playful interiors</p>
+        </div>
+        <div class="portfolio-item fade-in" data-category="other">
+          <img src="Assets/images/readingcorner1.png" alt="Reading Corner">
+          <h3>Reading Corner</h3>
+          <p>Cozy nook</p>
+        </div>
+        <div class="portfolio-item fade-in" data-category="other">
+          <img src="Assets/images/restinterior1.png" alt="Rest Interior">
+          <h3>Rest Interior</h3>
+          <p>Relaxing atmosphere</p>
         </div>
       </div>
-      
       <div class="explore-link">
         <a href="#">Explore more projects</a>
       </div>
@@ -463,21 +495,26 @@
         <h2 class="section-title">Our designed spaces don't just look good<br>they work beautifully too.</h2>
       </div>
       
-      <div class="spaces-gallery">
+            <div class="spaces-gallery">
         <div class="space-item fade-in">
-          <img src="Assets/images/boysbedcartheme2.jpg" alt="Bedroom Design">
+          <img src="Assets/images/bedrooms3.jpeg" alt="Bedroom Design">
         </div>
         <div class="space-item fade-in">
-          <img src="Assets/images/boysbedcartheme3.jpg" alt="Master Bedroom">
+          <img src="Assets/images/livingrooms3.png" alt="Living Room">
         </div>
         <div class="space-item fade-in">
-          <img src="Assets/images/exteriordesign1.png" alt="Bedroom Detail">
+          <img src="Assets/images/kitchen3.png" alt="Kitchen">
         </div>
         <div class="space-item fade-in">
-          <img src="Assets/images/exteriordesign2.png" alt="Living Room View">
+          <img src="Assets/images/exteriordesign2.png" alt="Exterior">
+        </div>
+        <div class="space-item fade-in">
+          <img src="Assets/images/readingcorner2.png" alt="Reading Corner">
+        </div>
+        <div class="space-item fade-in">
+          <img src="Assets/images/boysbedcartheme2.jpg" alt="Boys Room">
         </div>
       </div>
-      
       <div class="slider-nav" style="margin-top: 30px;">
         <button onclick="scrollGallery(-1)">‹</button>
         <button onclick="scrollGallery(1)">›</button>
@@ -931,6 +968,8 @@
 
 </body>
 </html>
+
+
 
 
 
