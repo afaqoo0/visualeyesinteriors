@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VisualEyes Interior | Best Interior Design Company in Dubai</title>
+  <meta name="description" content="We interior design spaces for quality living without chaos. 10+ years of experience in residential and commercial interior design in Dubai.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="Assets/images/logo.png" alt="VisualEyes Interiors" style="height: 60px;">
+      </a>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="#services" class="dropdown">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#process">Blogs</a>
+        <a href="#founder">About</a>
+        <button class="btn-book" onclick="scrollToSection('contact')">Book consultation</button>
+      </nav>
+      
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <p class="hero-tag">Best Interior Design Company in Dubai</p>
+        <h1 class="hero-title">
+          We Interior design<br>
+          spaces for quality living<br>
+          <em>without chaos</em>
+        </h1>
+        <button class="hero-cta" onclick="scrollToSection('calculator')">
+          Estimate Interior design cost (in 60 sec)
+        </button>
+      </div>
+      <div class="hero-image fade-in">
+        <img src="Assets/bedroom_and_livingroom/2.jpeg" alt="Luxury interior design living room">
+        <div class="hero-badge">
+          <div class="number">10+</div>
+          <div class="label">Years of<br>Craft</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="testimonials-slider" id="testimonialsSlider">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <img src="Assets/images/mirror_3.png" alt="Home Transformation">
+          <div class="testimonial-overlay">
+            <div class="testimonial-quote">
+              "IT'S BEYOND<br><em>MY EXPECTATIONS</em>"
+            </div>
+            <div class="testimonial-play">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <div class="testimonial-info">
+              <h4>Home Transformation</h4>
+              <p>Sobha Hartland Waves, Dubai</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <img src="Assets/images/mirror_4.png" alt="Villa Interior Design">
+          <div class="testimonial-overlay">
+            <div class="testimonial-quote">
+              "YOU OPTIMIZED THE SPACE &<br><em>MADE IT FUNCTIONAL</em>"
+            </div>
+            <div class="testimonial-play">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <div class="testimonial-info">
+              <h4>Villa Interior Design</h4>
+              <p>Eden Valley Community, Dubailand</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <img src="Assets/images/mirror_2.png" alt="Penthouse Interior Design">
+          <div class="testimonial-overlay">
+            <div class="testimonial-quote">
+              "IT'S MORE THAN<br><em>OUR EXPECTATIONS</em>"
+            </div>
+            <div class="testimonial-play">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <div class="testimonial-info">
+              <h4>Penthouse Interior Design</h4>
+              <p>Dubai Hills Estate</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <img src="Assets/images/mirror_5.png" alt="Apartment Design">
+          <div class="testimonial-overlay">
+            <div class="testimonial-quote">
+              "ABSOLUTELY<br><em>STUNNING WORK</em>"
+            </div>
+            <div class="testimonial-play">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+            <div class="testimonial-info">
+              <h4>Apartment Design</h4>
+              <p>Marina Gate, Dubai Marina</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="slider-nav">
+        <button onclick="slideTestimonials(-1)">‚Äπ</button>
+        <button onclick="slideTestimonials(1)">‚Ä∫</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNER LOGOS ===== -->
+  <section class="partners">
+    <div class="container">
+      <div class="partners-grid">
+        <span class="partner-logo">EMAAR</span>
+        <span class="partner-logo">MERAAS</span>
+        <span class="partner-logo">ELLINGTON</span>
+        <span class="partner-logo">SOBHA</span>
+        <span class="partner-logo">AZIZI</span>
+        <span class="partner-logo">DAMAC</span>
+        <span class="partner-logo">SELECT GROUP</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <p class="section-tag">For residential & commercial spaces</p>
+      <h2 class="section-title">Services we offer</h2>
+      
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <img src="Assets/bedroom_and_livingroom/1.jpeg" alt="Design Service">
+          <div class="service-card-overlay">
+            <span class="service-badge">‚≠ê Full Package</span>
+            <h3>Design service</h3>
+            <p>Complete design package from drawings to site coordination</p>
+          </div>
+        </div>
+        
+        <div class="service-card fade-in">
+          <img src="Assets/images/mirror_6.png" alt="Furnishing Service">
+          <div class="service-card-overlay">
+            <h3>Furnishing service</h3>
+            <p>Curated furniture & decor selection for your space</p>
+          </div>
+        </div>
+        
+        <div class="service-card fade-in">
+          <img src="Assets/images/mirror_7.png" alt="Turnkey Service">
+          <div class="service-card-overlay">
+            <h3>Turnkey service</h3>
+            <p>End-to-end project delivery with zero hassle</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Stats Row -->
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-number" data-target="100">0+</div>
+          <div class="stat-label">Spaces designed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">üèÜ</div>
+          <div class="stat-label">ISO Certified</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="10">0+</div>
+          <div class="stat-label">Years of experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="98">0%</div>
+          <div class="stat-label">Happy clients</div>
+        </div>
+        <button class="btn-gold" onclick="scrollToSection('calculator')">Get your custom budget & design plan</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <p class="section-tag">Our portfolio</p>
+      <h2 class="section-title">What we've done so far?</h2>
+      
+      <div class="portfolio-tabs">
+        <button class="active" onclick="filterPortfolio('all', this)">All</button>
+        <button onclick="filterPortfolio('residential', this)">Residential</button>
+        <button onclick="filterPortfolio('commercial', this)">Commercial</button>
+        <button onclick="filterPortfolio('rental', this)">Rental home</button>
+        <button onclick="filterPortfolio('food', this)">Food & beverages</button>
+      </div>
+      
+      <div class="portfolio-grid">
+        <div class="portfolio-item fade-in" data-category="residential">
+          <img src="Assets/bedroom_and_livingroom/1.jpeg" alt="Eden House">
+          <h3>Eden house</h3>
+          <p>The canal, jumeirah 2</p>
+        </div>
+        
+        <div class="portfolio-item fade-in" data-category="residential">
+          <img src="Assets/bedroom_and_livingroom/2.jpeg" alt="Wabi Sabi">
+          <h3>Wabi sabi</h3>
+          <p>Eden valley community, dubailand</p>
+        </div>
+        
+        <div class="portfolio-item fade-in" data-category="commercial">
+          <img src="Assets/images/mirror_8.png" alt="Kiddie Express">
+          <h3>Kiddie express</h3>
+          <p>Silicon central mall, dubai silicon oasis</p>
+        </div>
+        
+        <div class="portfolio-item fade-in" data-category="food">
+          <img src="Assets/images/mirror_9.png" alt="Numo Cafe">
+          <h3>Numo cafe</h3>
+          <p>Al ghubaiba rta bus station, bur dubai</p>
+        </div>
+      </div>
+      
+      <div class="explore-link">
+        <a href="#">Explore more projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COST CALCULATOR ===== -->
+  <section class="cost-calculator" id="calculator">
+    <div class="container">
+      <div class="calc-content fade-in">
+        <p class="calc-tag">Interior cost calculator</p>
+        <h2>Estimate interior design cost in 60 sec</h2>
+        <p>Get an estimate for design fees, furnishing, and turnkey package for your space in just 60 seconds.</p>
+        <button class="btn-outline">see your estimate now</button>
+      </div>
+      <div class="calc-preview fade-in">
+        <img src="Assets/bedroom_and_livingroom/6.jpeg" alt="Interior Design Calculator Preview">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOUNDER MESSAGE ===== -->
+  <section class="founder" id="founder">
+    <div class="container">
+      <div class="founder-text fade-in">
+        <p class="section-tag" style="text-align:left">Who we are</p>
+        <h2 class="section-title" style="text-align:left">Founder message</h2>
+        
+        <p class="greeting">Dear owners,</p>
+        
+        <p>Every owner starts with a vision, but bringing it to life can feel overwhelming. After 10 years and 100+ projects across Dubai, I've learned that great design begins with understanding the people behind the home. That's why I founded VisualEyes Interiors.</p>
+        
+        <p>We create refined, functional spaces that reflect your personality, blending timeless design with thoughtful execution. With clear communication, transparent budgets, and seamless project management, we make the journey to your dream home as effortless as the result.</p>
+        
+        <div class="founder-signature">
+          <h4>Haris</h4>
+          <p>Founder & Principal Designer of VisualEyes Interiors</p>
+        </div>
+      </div>
+      
+      <div class="founder-video fade-in">
+        <img src="Assets/images/mirror_10.png" alt="Haris - Founder">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TWO PATHWAYS ===== -->
+  <section class="pathways" id="pathways">
+    <div class="container">
+      <div class="pathways-header fade-in">
+        <h2>Two pathways.<br><span>Every space covered.</span></h2>
+        <p>Pick where your project lives ‚Äî we tailor the entire service around it.</p>
+      </div>
+      
+      <div class="pathways-toggle">
+        <button class="active" onclick="togglePathway('residential', this)">Residential</button>
+        <button onclick="togglePathway('commercial', this)">Commercial</button>
+      </div>
+      
+      <div class="pathways-grid">
+        <div class="pathway-card fade-in">
+          <img src="Assets/bedroom_and_livingroom/1.jpeg" alt="Villa Interior Design">
+          <div class="pathway-card-content">
+            <h4>Villa Interior<br>Design Service</h4>
+            <span class="arrow">‚Üó</span>
+          </div>
+        </div>
+        
+        <div class="pathway-card fade-in">
+          <img src="Assets/bedroom_and_livingroom/2.jpeg" alt="Duplex Interior Design">
+          <div class="pathway-card-content">
+            <h4>Duplex Interior<br>Design Service</h4>
+            <span class="arrow">‚Üó</span>
+          </div>
+        </div>
+        
+        <div class="pathway-card fade-in">
+          <img src="Assets/bedroom_and_livingroom/4.jpeg" alt="Studio Interior Design">
+          <div class="pathway-card-content">
+            <h4>Studio Interior<br>Design Service</h4>
+            <span class="arrow">‚Üó</span>
+          </div>
+        </div>
+        
+        <div class="pathway-card fade-in">
+          <img src="Assets/bedroom_and_livingroom/6.jpeg" alt="Penthouse Design">
+          <div class="pathway-card-content">
+            <h4>Penthouse<br>Design Service</h4>
+            <span class="arrow">‚Üó</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== YOUR SPACE, YOUR DESIGN ===== -->
+  <section class="unique-design">
+    <div class="container">
+      <div class="unique-inner">
+        <div class="unique-photos">
+          <div class="unique-photo" style="--rotation: -5deg">
+            <img src="Assets/images/mirror_11.png" alt="Project 1">
+          </div>
+          <div class="unique-photo" style="--rotation: 3deg">
+            <img src="Assets/images/mirror_12.png" alt="Project 2">
+          </div>
+          <div class="unique-photo" style="--rotation: -2deg">
+            <img src="Assets/images/mirror_13.png" alt="Project 3">
+          </div>
+          <div class="unique-photo" style="--rotation: 4deg">
+            <img src="Assets/images/mirror_14.png" alt="Project 4">
+          </div>
+        </div>
+        
+        <div class="unique-text-center fade-in">
+          <h2>Your space, Your design, Only yours.</h2>
+          <p>At VisualEyes Interiors, we believe your space should never feel like anyone else's. That's why we never repeat a design. Ever.</p>
+          <a href="#">Learn more</a>
+        </div>
+        
+        <div class="unique-photos">
+          <div class="unique-photo" style="--rotation: 2deg">
+            <img src="Assets/images/mirror_15.png" alt="Project 5">
+          </div>
+          <div class="unique-photo" style="--rotation: -3deg">
+            <img src="Assets/images/mirror_16.png" alt="Project 6">
+          </div>
+          <div class="unique-photo" style="--rotation: 5deg">
+            <img src="Assets/images/mirror_17.png" alt="Project 7">
+          </div>
+          <div class="unique-photo" style="--rotation: -4deg">
+            <img src="Assets/images/mirror_18.png" alt="Project 8">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== YOU NEED A TEAM ===== -->
+  <section class="team" id="team">
+    <div class="container">
+      <div class="team-content fade-in">
+        <p class="section-tag">For your vision</p>
+        <h2 class="section-title">You need a team who</h2>
+      </div>
+      
+      <div class="team-grid">
+        <div class="team-member fade-in">
+          <img src="Assets/images/mirror_20.png" alt="Team member - Understanding your taste">
+          <div class="team-sign">Understands your taste</div>
+        </div>
+        
+        <div class="team-member fade-in">
+          <img src="Assets/images/mirror_21.png" alt="Team member - Handles everything end-to-end">
+          <div class="team-sign">Who can design your space that doesn't impress at first, but feels like you belong here</div>
+        </div>
+        
+        <div class="team-member fade-in">
+          <img src="Assets/images/mirror_22.png" alt="Team member - Takes responsibility">
+          <div class="team-sign">Takes responsibility so you don't have to</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DESIGN PROCESS ===== -->
+  <section class="process" id="process">
+    <div class="container">
+      <p class="section-tag">Our interior design firm process</p>
+      <h2 class="section-title">This is how we design your space interior</h2>
+      
+      <div class="process-grid">
+        <div class="process-card fade-in">
+          <img src="Assets/images/mirror_23.png" alt="Step 1 - Consultation">
+          <div class="process-step-badge">
+            Step<br><span>01</span>
+          </div>
+          <p>Initial consultation to understand your vision.</p>
+        </div>
+        
+        <div class="process-card fade-in">
+          <img src="Assets/images/mirror_24.png" alt="Step 2 - Concept Development">
+          <div class="process-step-badge">
+            Step<br><span>02</span>
+          </div>
+          <p>Concept development for cohesive design.</p>
+        </div>
+        
+        <div class="process-card fade-in">
+          <img src="Assets/images/mirror_25.png" alt="Step 3 - Space Planning">
+          <div class="process-step-badge">
+            Step<br><span>03</span>
+          </div>
+          <p>Space planning creating functional flow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DESIGNED SPACES ===== -->
+  <section class="designed-spaces">
+    <div class="container">
+      <div class="fade-in" style="text-align: center;">
+        <h2 class="section-title">Our designed spaces don't just look good<br>they work beautifully too.</h2>
+      </div>
+      
+      <div class="spaces-gallery">
+        <div class="space-item fade-in">
+          <img src="Assets/bedroom_and_livingroom/3.jpeg" alt="Bedroom Design">
+        </div>
+        <div class="space-item fade-in">
+          <img src="Assets/bedroom_and_livingroom/4.jpeg" alt="Master Bedroom">
+        </div>
+        <div class="space-item fade-in">
+          <img src="Assets/bedroom_and_livingroom/5.jpeg" alt="Bedroom Detail">
+        </div>
+        <div class="space-item fade-in">
+          <img src="Assets/bedroom_and_livingroom/6.jpeg" alt="Living Room View">
+        </div>
+      </div>
+      
+      <div class="slider-nav" style="margin-top: 30px;">
+        <button onclick="scrollGallery(-1)">‚Äπ</button>
+        <button onclick="scrollGallery(1)">‚Ä∫</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT FORM ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-form fade-in">
+        <h2>Get your space designed,<br>without the stress.</h2>
+        
+        <p class="greeting-text">Hi there! üëã</p>
+        
+        <div class="progress-dots">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
+        <p class="form-label">What should we call you?</p>
+        
+        <div class="form-input-group">
+          <span class="icon">üë§</span>
+          <input type="text" class="form-input" placeholder="Your name">
+        </div>
+        
+        <button class="btn-next">Next</button>
+      </div>
+      
+      <div class="contact-image fade-in">
+        <img src="Assets/images/mirror_26.png" alt="Design Consultation">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUOTE SECTION ===== -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="quote-text fade-in">
+        <h2>Every detail is intentional.<br>Every square foot has a purpose.</h2>
+      </div>
+      <div class="quote-attribution fade-in">
+        <p>Because true luxury isn't just what you see ‚Äî it's what you feel every day.</p>
+        <p>"Haris"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3D WALKTHROUGH ===== -->
+  <section class="walkthrough" id="walkthrough">
+    <div class="container">
+      <p class="section-tag" style="color: rgba(255,255,255,0.6);">A visual experience.</p>
+      <h2 class="section-title" style="color: var(--white);">See your dream space before execution.</h2>
+      <p style="text-align: center; color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-top: -30px;">
+        Our hyper-realistic 3d renders let you walk through your space before we even start execution.
+      </p>
+      
+      <div class="walkthrough-viewer">
+        <img src="Assets/bedroom_and_livingroom/6.jpeg" alt="3D Walkthrough" id="walkthroughMain">
+        <button class="fullscreen-btn">‚õ∂</button>
+        <div class="scroll-indicator">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M7 10l5 5 5-5z"/></svg>
+        </div>
+      </div>
+      
+      <div class="walkthrough-thumbs">
+        <img src="Assets/bedroom_and_livingroom/1.jpeg" alt="View 1" class="active" onclick="changeWalkthrough(this)">
+        <img src="Assets/bedroom_and_livingroom/3.jpeg" alt="View 2" onclick="changeWalkthrough(this)">
+        <img src="Assets/bedroom_and_livingroom/5.jpeg" alt="View 3" onclick="changeWalkthrough(this)">
+      </div>
+      
+      <div class="walkthrough-link">
+        <a href="#">Lets explore more 3D walkthrough</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- ===== CLIENT STORIES & REVIEWS ===== -->
+  <section class="client-stories fade-in">
+    <div class="container">
+      <p class="section-tag" style="text-align: center;">Client stories & reviews</p>
+      <h2 class="section-title">Loved by people like you</h2>
+      
+      <div class="main-video-review">
+        <img src="Assets/images/mirror_16.png" alt="Client Review Video">
+        <div class="video-nav">
+          <button>ã</button>
+          <button>õ</button>
+        </div>
+      </div>
+      
+      <div class="google-reviews">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">eu</div>
+            <div>
+              <strong>Euphoria interiors</strong>
+              <div class="review-stars">????? 5.0</div>
+            </div>
+          </div>
+          <p class="review-text">33 reviews<br><br>G review us on google</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">M</div>
+            <div>
+              <strong>Mujahid ali</strong><br>
+              <span style="font-size:0.7rem; color:var(--gray);">in the last week</span>
+            </div>
+          </div>
+          <div class="review-stars">?????</div>
+          <p class="review-text">This is best team to work with. got a very good experience...</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">S</div>
+            <div>
+              <strong>Shahnawaz ahmed</strong><br>
+              <span style="font-size:0.7rem; color:var(--gray);">3 weeks ago</span>
+            </div>
+          </div>
+          <div class="review-stars">?????</div>
+          <p class="review-text">I had a fantastic experience with euphoria interiors designing my apartment...</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">A</div>
+            <div>
+              <strong>Ahmed</strong><br>
+              <span style="font-size:0.7rem; color:var(--gray);">1 month ago</span>
+            </div>
+          </div>
+          <div class="review-stars">?????</div>
+          <p class="review-text">Had a very good experience working with this interior design team...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GUARANTEE & DELIVERABLES ===== -->
+  <section class="guarantee-deliverables fade-in">
+    <div class="container">
+      <div class="guarantee-section">
+        <p class="section-tag">Our guarantee</p>
+        <h2 class="section-title" style="margin-bottom: 20px;">Euphoria triple guarantee</h2>
+        <div class="guarantee-content">
+          <div class="guarantee-points">
+            <div class="guarantee-point">
+              <h4>?? No design repeat</h4>
+              <p>No copy-paste, no repeats</p>
+            </div>
+            <div class="guarantee-point">
+              <h4>?? No quality compromise</h4>
+              <p>If it doesn't meet our benchmark, we fix it at our own cost.</p>
+            </div>
+            <div class="guarantee-point">
+              <h4>?? Transparent communication</h4>
+              <p>One point of contact, 9 to 5.</p>
+            </div>
+            <button class="btn-book" style="width: fit-content; margin-top: 20px;">Get your custom budget & design plan</button>
+          </div>
+          <div class="guarantee-image">
+            <img src="Assets/images/mirror_27.png" style="width:100%; height:100%; object-fit:cover; border-radius:12px;" alt="Guarantee">
+          </div>
+        </div>
+      </div>
+
+      <div class="deliverables-grid fade-in">
+        <div class="deliverables-left">
+          <h2>Get a complete interior design plan for your space</h2>
+          <p style="color:var(--gray); margin-bottom: 20px;">No spam, no hidden costs, no obligations.</p>
+        </div>
+        <div class="deliverables-right">
+          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 24px;">What will you get?</h3>
+          <div class="deliverables-list">
+            <div class="deliverable-item">
+              <div style="font-size: 1.5rem;">??</div>
+              <div>
+                <h4>Concept board</h4>
+                <p>A visual collage showcasing style, colors, materials, and the space's overall design mood.</p>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <div style="font-size: 1.5rem;">??</div>
+              <div>
+                <h4>Project budget</h4>
+                <p>A transparent breakdown of costs so you know exactly where your money goes.</p>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <div style="font-size: 1.5rem;">?</div>
+              <div>
+                <h4>Delivery schedule</h4>
+                <p>A clear, step-by-step timeline to keep your project on track without surprises.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq fade-in">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 20px;">Frequently asked questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">Can we schedule a site visit? <span>+</span></div>
+        <div class="faq-item">Do you have experience in interior design project management? <span>+</span></div>
+        <div class="faq-item">Do you have an in-house team? <span>+</span></div>
+        <div class="faq-item">Do you have partnerships with contractors? <span>+</span></div>
+        <div class="faq-item">Do you offer both design and fit-out services? <span>+</span></div>
+        <div class="faq-item">Where do you source your items from? <span>+</span></div>
+        <div class="faq-item">Do you work with the dubai authorities as well? <span>+</span></div>
+        <div class="faq-item">Will I be assigned a dedicated designer once i give you the project? <span>+</span></div>
+        <div class="faq-item">What are your project management fees? <span>+</span></div>
+        <div class="faq-item">What is the timeline for the design? <span>+</span></div>
+        <div class="faq-item">Will I receive a refund if i don't like the design? <span>+</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <div class="container fade-in">
+    <div class="cta-banner">
+      <div>
+        <h2>Ready to transform your space?</h2>
+        <p>Schedule a consultation with our expert designers to bring your vision to life.</p>
+      </div>
+      <button class="btn-white">Get your custom budget & design plan</button>
+    </div>
+  </div>
+
+  <!-- ===== FOUNDER NOTE 2 ===== -->
+  <section class="founder-note-2 fade-in">
+    <div class="container">
+      <div class="founder-img-circle">
+        <img src="Assets/images/mirror_10.png" alt="Founder Note">
+      </div>
+      <div>
+        <p class="section-tag" style="text-align: left;">A special note from founder</p>
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 20px;">Still unsure? start with interior design consultation</h2>
+        <p>I have lost count of how many people reach me halfway through a renovation they no longer recognise. They started full of ideas, spoke to two or three firms, and somewhere the project stopped feeling like theirs. Early on I learned this the hard way. I once gave a client exactly what they asked for instead of what they needed, and we both watched a beautiful space fall flat. The right design starts with the right conversation, not the right Pinterest board.</p>
+        <p>So here is my honest advice. If you are still unsure whether you need an interior design consultant or a full interior designer, start with a consultation. It costs less, commits you to nothing, and gives you clarity before you spend on the wrong thing.</p>
+        <p>And right now you speak directly to me, the founder and principal designer, not a junior reading from a script. Whether you are here in Dubai or buying from another country, I will tell you exactly where to begin. 10 years, 100+ interior design projects, and not one left unfinished.</p>
+        <h4 style="font-family: var(--font-heading); font-size: 1.2rem; margin-top: 20px;">Haris</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRE-FOOTER & FOOTER ===== -->
+  <div class="footer-pre">
+    <div class="container">
+      <p>Everything you need to know about Interior design. <span style="float:right;">v</span></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container" style="padding-top: 60px;">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Assets/images/logo.png" alt="VisualEyes Interiors" style="height: 60px; margin-bottom: 16px;">
+          <p style="font-size: 0.8rem;">VisualEyes Interiors is a luxury interior design company in Dubai that understands you and designs interiors for your heart, spirit, and soul.</p>
+          <div class="social-links" style="margin-top: 20px; border:none;">
+            <a href="#" aria-label="YouTube" style="border:none;">?</a>
+            <a href="#" aria-label="Facebook" style="border:none;">f</a>
+            <a href="#" aria-label="LinkedIn" style="border:none;">in</a>
+            <a href="#" aria-label="X" style="border:none;">X</a>
+            <a href="#" aria-label="Instagram" style="border:none;">??</a>
+            <a href="#" aria-label="TikTok" style="border:none;">?</a>
+            <a href="#" aria-label="Pinterest" style="border:none;">P</a>
+          </div>
+        </div>
+        
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <img src="Assets/images/mirror_5.png" alt="Award" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+            <div style="color: var(--dark); font-weight: bold; font-size: 1.5rem;">ISO<br><span style="font-size: 0.7rem; font-weight: normal;">9001:2015</span></div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <a href="#">Contact us</a>
+          <a href="#">About us</a>
+          <a href="#">Our portfolio</a>
+          <a href="#">Estimate interior design cost</a>
+          <a href="#">Customer journey</a>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Useful links</h4>
+          <a href="#">Career</a>
+          <a href="#">Our Team</a>
+          <a href="#">Supplies & vendors</a>
+          <a href="#">Tell a friend</a>
+          <a href="#">360 View</a>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contact us</h4>
+          <a href="#">?? 03339333978</a>
+          <a href="#">?? M-03, Al Gurg Building, Umm Hurair, Dubai, UAE</a>
+          <a href="#">?? sales@visualeyes.com</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom-areas">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+          <p>&copy; 2026 VisualEyes Interior Design Services. All rights reserved.</p>
+          <div style="display: flex; gap: 20px;">
+             <a href="#" style="color: var(--gray); font-size: 0.8rem;">Terms of service</a>
+             <a href="#" style="color: var(--gray); font-size: 0.8rem;">Cookie policy</a>
+             <a href="#" style="color: var(--gray); font-size: 0.8rem;">Privacy policy</a>
+          </div>
+        </div>
+        <h4 style="color: var(--dark); margin-bottom: 12px; font-weight: normal; font-size: 0.9rem;">Areas we serve across Dubai</h4>
+        <p>Business bay ï Silicon oasis ï Sheikh zayed road ï Palm jumeirah ï World island ï The oasis ï The Greens ï Barsha heights ï Sports city ï The heights country club ï Mirdif dubai ï Emirates hills ï Marina dubai (Dubai marina) ï Arabian ranches ï Motor city dubai ï Jumeirah beach residence (JBR) ï Jumeirah ï Palm jebel ali ï Creek harbour ï Dubai island ï Downtown Dubai ï Deira & garhoud ï Nadd al sheba ï Al barari ï MBR city (meydan) ï Abu dhabi ï Sharjah UAE</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FAB ===== -->
+  <a href="https://wa.me/923339333978" class="whatsapp-fab" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.637l4.56-1.203A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.239 0-4.332-.726-6.02-1.956l-.42-.311-2.711.715.727-2.652-.342-.451A9.955 9.955 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+    </svg>
+  </a>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ===== HEADER SCROLL EFFECT =====
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // ===== MOBILE MENU =====
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      const hamburger = document.getElementById('hamburger');
+      nav.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    }
+
+    // ===== SMOOTH SCROLL =====
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // ===== TESTIMONIALS SLIDER =====
+    function slideTestimonials(dir) {
+      const slider = document.getElementById('testimonialsSlider');
+      const cardWidth = slider.querySelector('.testimonial-card').offsetWidth + 20;
+      slider.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+    }
+
+    // ===== PORTFOLIO FILTER =====
+    function filterPortfolio(category, btn) {
+      // Update active tab
+      document.querySelectorAll('.portfolio-tabs button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      // Filter items
+      document.querySelectorAll('.portfolio-item').forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // ===== PATHWAYS TOGGLE =====
+    function togglePathway(type, btn) {
+      document.querySelectorAll('.pathways-toggle button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    // ===== 3D WALKTHROUGH =====
+    function changeWalkthrough(thumb) {
+      document.querySelectorAll('.walkthrough-thumbs img').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+      document.getElementById('walkthroughMain').src = thumb.src;
+    }
+
+    // ===== GALLERY SCROLL =====
+    function scrollGallery(dir) {
+      const gallery = document.querySelector('.spaces-gallery');
+      gallery.scrollBy({ left: dir * 300, behavior: 'smooth' });
+    }
+
+    // ===== INTERSECTION OBSERVER FOR ANIMATIONS =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ===== COUNTER ANIMATION =====
+    function animateCounters() {
+      document.querySelectorAll('.stat-number[data-target]').forEach(counter => {
+        const target = parseInt(counter.dataset.target);
+        const suffix = counter.textContent.includes('%') ? '%' : '+';
+        let current = 0;
+        const increment = target / 60;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          counter.textContent = Math.floor(current) + suffix;
+        }, 30);
+      });
+    }
+
+    // Trigger counter animation when stats section is visible
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const statsRow = document.querySelector('.stats-row');
+    if (statsRow) statsObserver.observe(statsRow);
+  </script>
+
+</body>
+</html>
+
+
+
