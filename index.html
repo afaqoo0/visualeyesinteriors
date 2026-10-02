@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -227,8 +227,7 @@
       <h2 class="section-title">What we've done so far?</h2>
       
             <div class="portfolio-tabs">
-        <button class="active" onclick="filterPortfolio('all', this)">All</button>
-        <button onclick="filterPortfolio('bedrooms', this)">Bedrooms</button>
+        <button class="active" onclick="filterPortfolio('bedrooms', this)">Bedrooms</button>
         <button onclick="filterPortfolio('living', this)">Living & Dining</button>
         <button onclick="filterPortfolio('kitchen', this)">Kitchen</button>
         <button onclick="filterPortfolio('exterior', this)">Exterior & Garden</button>
@@ -933,6 +932,13 @@
 
     document.getElementById('designModal').addEventListener('click', function(e) {
       if (e.target === this) closeDesignModal();
+    });
+
+    // Auto-filter portfolio to show Bedrooms by default
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+      if (item.dataset.category !== 'bedrooms') {
+        item.style.display = 'none';
+      }
     });
 
     // ===== HEADER SCROLL EFFECT =====
