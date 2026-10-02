@@ -1655,6 +1655,18 @@ ul {
   color: var(--dark) !important;
 }
 
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 /* ===== WHATSAPP FAB ===== */
 .whatsapp-fab {
   position: fixed;
@@ -1861,3 +1873,4 @@ ul {
     font-size: 1.6rem;
   }
 }
+
