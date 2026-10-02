@@ -950,18 +950,51 @@
   <section class="faq fade-in">
     <div class="container">
       <h2 class="section-title" style="margin-bottom: 20px;">Frequently asked questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">Can we schedule a site visit? <span>+</span></div>
-        <div class="faq-item">Do you have experience in interior design project management? <span>+</span></div>
-        <div class="faq-item">Do you have an in-house team? <span>+</span></div>
-        <div class="faq-item">Do you have partnerships with contractors? <span>+</span></div>
-        <div class="faq-item">Do you offer both design and fit-out services? <span>+</span></div>
-        <div class="faq-item">Where do you source your items from? <span>+</span></div>
-        <div class="faq-item">Do you work with the dubai authorities as well? <span>+</span></div>
-        <div class="faq-item">Will I be assigned a dedicated designer once i give you the project? <span>+</span></div>
-        <div class="faq-item">What are your project management fees? <span>+</span></div>
-        <div class="faq-item">What is the timeline for the design? <span>+</span></div>
-        <div class="faq-item">Will I receive a refund if i don't like the design? <span>+</span></div>
+            <div class="faq-list">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">Can we schedule a site visit? <span>+</span></div>
+          <div class="faq-answer">Absolutely! We encourage site visits to truly understand your space, lighting, and layout possibilities. Contact our team to book a convenient time.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">Do you have experience in interior design project management? <span>+</span></div>
+          <div class="faq-answer">Yes, we provide end-to-end project management. From initial concept to the final handover, our dedicated team ensures everything is executed flawlessly and on time.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">Do you have an in-house team? <span>+</span></div>
+          <div class="faq-answer">Yes, we have a complete in-house team of highly skilled designers, architects, and project managers to guarantee the highest quality for your project.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">Do you have partnerships with contractors? <span>+</span></div>
+          <div class="faq-answer">We collaborate with a trusted network of premium contractors and artisans in Dubai who meet our strict quality and reliability standards.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">Do you offer both design and fit-out services? <span>+</span></div>
+          <div class="faq-answer">Yes! We provide turnkey solutions. We handle both the creative design process and the complete fit-out execution to bring the vision to reality.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">Where do you source your items from? <span>+</span></div>
+          <div class="faq-answer">We source globally and locally. Depending on your design style and budget, we procure high-end materials and custom furniture from trusted international brands and bespoke local artisans.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">Do you work with the dubai authorities as well? <span>+</span></div>
+          <div class="faq-answer">Yes, we handle all necessary paperwork and approvals with Dubai Municipality, Civil Defense, and building managements (NOCs) to ensure full compliance.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">Will I be assigned a dedicated designer once i give you the project? <span>+</span></div>
+          <div class="faq-answer">Certainly. You will have a dedicated lead designer and project manager assigned exclusively to you to ensure clear communication and a seamless journey.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">What are your project management fees? <span>+</span></div>
+          <div class="faq-answer">Our project management fees are structured transparently and vary depending on the scope and complexity of your project. We provide a clear breakdown during our initial proposal.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">What is the timeline for the design? <span>+</span></div>
+          <div class="faq-answer">A standard design phase takes between 3 to 6 weeks, depending on the project's size, detail level, and the speed of revisions and feedback.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">Will I receive a refund if i don't like the design? <span>+</span></div>
+          <div class="faq-answer">We work closely with you through mood boards and concepts before finalizing. While design fees are generally non-refundable due to the time invested, we guarantee revisions until you are completely satisfied with the result.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -1154,6 +1187,17 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+        // ===== FAQ ACCORDION =====
+    function toggleFaq(item) {
+      const isActive = item.classList.contains('active');
+      // Close all others
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+      // Open clicked if it wasn't active
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    }
+
     // ===== COUNTER ANIMATION =====
     function animateCounters() {
       document.querySelectorAll('.stat-number[data-target]').forEach(counter => {
@@ -1189,6 +1233,7 @@
 
 </body>
 </html>
+
 
 
 
