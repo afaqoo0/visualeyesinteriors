@@ -1976,17 +1976,28 @@ ul {
 }
 
 /* ===== LOGO FIX ===== */
+.logo {
+  display: flex;
+  align-items: center;
+}
 .logo img {
-  height: 50px !important;
+  height: 46px !important;
   width: auto !important;
-  max-width: 180px !important;
-  object-fit: contain !important;
+  max-width: 240px !important;
+  display: block !important;
 }
 
 @media (max-width: 768px) {
   .logo img {
-    height: 38px !important;
-    max-width: 140px !important;
+    height: 34px !important;
+    max-width: 180px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 28px !important;
+    max-width: 150px !important;
   }
 }
 
