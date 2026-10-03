@@ -43,7 +43,7 @@
   <section class="hero" id="hero">
     <div class="container">
       <div class="hero-content fade-in">
-        <p class="hero-tag">Best Interior Design Company in Peshawar</p>
+        <p class="hero-tag">Best Interior Design Company in Dubai</p>
         <h1 class="hero-title">
           We Interior design<br>
           spaces for quality living<br>
@@ -54,7 +54,22 @@
         </button>
       </div>
       <div class="hero-image fade-in">
-        <img src="Assets/images/bedrooms1.jpeg" alt="Luxury interior design living room">
+        <div class="hero-slider-container">
+          <div class="hero-slide active">
+            <img src="Assets/images/hero_slide1.jpg" alt="Luxury Master Bedroom">
+          </div>
+          <div class="hero-slide">
+            <img src="Assets/images/hero_slide2.jpg" alt="Luxury Sitting Area 1">
+          </div>
+          <div class="hero-slide">
+            <img src="Assets/images/hero_slide3.jpg" alt="Luxury Sitting Area 2">
+          </div>
+          <div class="hero-slider-dots">
+            <span class="dot active" onclick="setHeroSlide(0)"></span>
+            <span class="dot" onclick="setHeroSlide(1)"></span>
+            <span class="dot" onclick="setHeroSlide(2)"></span>
+          </div>
+        </div>
         <div class="hero-badge">
           <div class="number">10+</div>
           <div class="label">Years of<br>Craft</div>
@@ -898,7 +913,27 @@
 
   <!-- ===== JAVASCRIPT ===== -->
   <script>
-        // ===== DESIGN MODAL =====
+    // ===== HERO SLIDER =====
+    let currentHeroSlide = 0;
+    function showHeroSlide(index) {
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-slider-dots .dot');
+      if (!slides.length) return;
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+      currentHeroSlide = index;
+    }
+    function nextHeroSlide() {
+      const slides = document.querySelectorAll('.hero-slide');
+      if (!slides.length) return;
+      showHeroSlide((currentHeroSlide + 1) % slides.length);
+    }
+    function setHeroSlide(index) {
+      showHeroSlide(index);
+    }
+    setInterval(nextHeroSlide, 4000);
+
+    // ===== DESIGN MODAL =====
     const designDescriptions = {
       bedrooms: "This luxurious bedroom design by VisualEyes Interiors blends modern comfort with elegant aesthetics. Features include premium materials, custom lighting, and bespoke furniture tailored to your personal style.",
       living: "An open-concept living and dining space designed to maximize natural light and create a warm, inviting atmosphere. Every element is carefully curated for both beauty and functionality.",
