@@ -19,8 +19,8 @@
     .port-tabs button { background: none; border: none; font-size: 0.9rem; color: #888; cursor: pointer; padding: 10px 4px; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.3s; font-weight: 500; letter-spacing: 0.5px; }
     .port-tabs button.active, .port-tabs button:hover { color: #000; border-bottom-color: #000; }
 
-    .port-grid { columns: 3; column-gap: 14px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    .port-item { break-inside: avoid; margin-bottom: 14px; border-radius: 10px; overflow: hidden; cursor: pointer; position: relative; }
+    .port-grid { columns: 4; column-gap: 16px; width: 100%; max-width: 100%; margin: 0; padding: 0 30px; }
+    .port-item { break-inside: avoid; margin-bottom: 16px; border-radius: 10px; overflow: hidden; cursor: pointer; position: relative; }
     .port-item img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
     .port-item:hover img { transform: scale(1.04); }
     .port-item .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0); transition: background 0.3s; display: flex; align-items: flex-end; padding: 20px; }
@@ -40,8 +40,17 @@
     .modal-body p { color: #666; line-height: 1.8; margin-bottom: 24px; }
     .modal-body a { display: inline-block; background: #FFB300; color: #000; padding: 14px 32px; text-decoration: none; font-weight: 700; border-radius: 6px; }
 
-    @media (max-width: 768px) { .port-grid { columns: 2; } }
-    @media (max-width: 480px) { .port-grid { columns: 1; } .port-header h1 { font-size: 1.8rem; } }
+    @media (max-width: 1200px) {
+      .port-grid { columns: 3; padding: 0 20px; }
+    }
+    @media (max-width: 768px) {
+      .port-grid { columns: 2; column-gap: 10px; padding: 0 10px; }
+      .port-item { margin-bottom: 10px; border-radius: 8px; }
+    }
+    @media (max-width: 480px) {
+      .port-grid { columns: 1; padding: 0 10px; }
+      .port-header h1 { font-size: 1.8rem; }
+    }
   </style>
 </head>
 <body>
