@@ -186,7 +186,7 @@
         <div class="service-card fade-in">
           <img src="Assets/images/boysbedcartheme2.jpg" alt="Design Service">
           <div class="service-card-overlay">
-            <span class="service-badge">ÃƒÂ¢Ã‚Â­Ã‚Â Full Package</span>
+            <span class="service-badge">ÃƒÆ’Ã‚Â¢Ãƒâ€šÃ‚Â­Ãƒâ€šÃ‚Â Full Package</span>
             <h3>Design service</h3>
             <p>Complete design package from drawings to site coordination</p>
           </div>
@@ -240,22 +240,39 @@
         <h2 class="section-title" style="margin-bottom: 0;">What we've done so far?</h2>
       </div>
       
+      <div class="portfolio-tabs">
+        <button class="active" onclick="filterPortfolio('bedrooms', this)">Bedrooms</button>
+        <button onclick="filterPortfolio('living', this)">Living &amp; Dining</button>
+        <button onclick="filterPortfolio('kitchen', this)">Kitchen</button>
+        <button onclick="filterPortfolio('exterior', this)">Exterior &amp; Garden</button>
+        <button onclick="filterPortfolio('other', this)">Specialty</button>
+      </div>
+      
       <div class="portfolio-grid portfolio-masonry">
-        <div class="portfolio-item fade-in" onclick="window.location.href='portfolio.html'" style="cursor:pointer;">
-          <img src="Assets/images/bedrooms1.jpeg" alt="Luxury Bedroom Design" loading="lazy">
-          <h3>Bedrooms</h3>
-          <p>VisualEyes Interiors</p>
-        </div>
-        <div class="portfolio-item fade-in" onclick="window.location.href='portfolio.html'" style="cursor:pointer;">
-          <img src="Assets/images/livinganddiningspace1.png" alt="Living & Dining Space" loading="lazy">
-          <h3>Living &amp; Dining</h3>
-          <p>VisualEyes Interiors</p>
-        </div>
-        <div class="portfolio-item fade-in" onclick="window.location.href='portfolio.html'" style="cursor:pointer;">
-          <img src="Assets/images/kitchen1.png" alt="Modern Kitchen Design" loading="lazy">
-          <h3>Kitchen</h3>
-          <p>VisualEyes Interiors</p>
-        </div>
+        <!-- Bedrooms (3 items) -->
+        <div class="portfolio-item fade-in" data-category="bedrooms" onclick="openDesignModal('Bedrooms 1', 'Assets/images/bedrooms1.jpeg', 'bedrooms')" style="cursor:pointer;"><img src="Assets/images/bedrooms1.jpeg" alt="Bedrooms 1" loading="lazy"><h3>Bedrooms 1</h3><p>VisualEyes Interiors</p></div>
+        <div class="portfolio-item fade-in" data-category="bedrooms" onclick="openDesignModal('Bedrooms 2', 'Assets/images/bedrooms2.png', 'bedrooms')" style="cursor:pointer;"><img src="Assets/images/bedrooms2.png" alt="Bedrooms 2" loading="lazy"><h3>Bedrooms 2</h3><p>VisualEyes Interiors</p></div>
+        <div class="portfolio-item fade-in" data-category="bedrooms" onclick="openDesignModal('Bedrooms 3', 'Assets/images/bedrooms3.jpeg', 'bedrooms')" style="cursor:pointer;"><img src="Assets/images/bedrooms3.jpeg" alt="Bedrooms 3" loading="lazy"><h3>Bedrooms 3</h3><p>VisualEyes Interiors</p></div>
+
+        <!-- Living & Dining (3 items) -->
+        <div class="portfolio-item fade-in" data-category="living" onclick="openDesignModal('Living & Dining 1', 'Assets/images/livinganddiningspace1.png', 'living')" style="cursor:pointer;"><img src="Assets/images/livinganddiningspace1.png" alt="Living & Dining 1" loading="lazy"><h3>Living &amp; Dining 1</h3><p>VisualEyes Interiors</p></div>
+        <div class="portfolio-item fade-in" data-category="living" onclick="openDesignModal('Living & Dining 2', 'Assets/images/livinganddiningspace2.png', 'living')" style="cursor:pointer;"><img src="Assets/images/livinganddiningspace2.png" alt="Living & Dining 2" loading="lazy"><h3>Living &amp; Dining 2</h3><p>VisualEyes Interiors</p></div>
+        <div class="portfolio-item fade-in" data-category="living" onclick="openDesignModal('Living & Dining 3', 'Assets/images/livinganddiningspace3.png', 'living')" style="cursor:pointer;"><img src="Assets/images/livinganddiningspace3.png" alt="Living & Dining 3" loading="lazy"><h3>Living &amp; Dining 3</h3><p>VisualEyes Interiors</p></div>
+
+        <!-- Kitchen (3 items) -->
+        <div class="portfolio-item fade-in" data-category="kitchen" onclick="openDesignModal('Kitchen 1', 'Assets/images/kitchen1.png', 'kitchen')" style="cursor:pointer;"><img src="Assets/images/kitchen1.png" alt="Kitchen 1" loading="lazy"><h3>Kitchen 1</h3><p>VisualEyes Interiors</p></div>
+        <div class="portfolio-item fade-in" data-category="kitchen" onclick="openDesignModal('Kitchen 2', 'Assets/images/kitchen2.png', 'kitchen')" style="cursor:pointer;"><img src="Assets/images/kitchen2.png" alt="Kitchen 2" loading="lazy"><h3>Kitchen 2</h3><p>VisualEyes Interiors</p></div>
+        <div class="portfolio-item fade-in" data-category="kitchen" onclick="openDesignModal('Kitchen 3', 'Assets/images/kitchen3.png', 'kitchen')" style="cursor:pointer;"><img src="Assets/images/kitchen3.png" alt="Kitchen 3" loading="lazy"><h3>Kitchen 3</h3><p>VisualEyes Interiors</p></div>
+
+        <!-- Exterior & Garden (3 items) -->
+        <div class="portfolio-item fade-in" data-category="exterior" onclick="openDesignModal('Exterior Design 1', 'Assets/images/exteriordesign1.png', 'exterior')" style="cursor:pointer;"><img src="Assets/images/exteriordesign1.png" alt="Exterior Design 1" loading="lazy"><h3>Exterior Design 1</h3><p>VisualEyes Interiors</p></div>
+        <div class="portfolio-item fade-in" data-category="exterior" onclick="openDesignModal('Exterior Design 2', 'Assets/images/exteriordesign2.png', 'exterior')" style="cursor:pointer;"><img src="Assets/images/exteriordesign2.png" alt="Exterior Design 2" loading="lazy"><h3>Exterior Design 2</h3><p>VisualEyes Interiors</p></div>
+        <div class="portfolio-item fade-in" data-category="exterior" onclick="openDesignModal('Small Garden 1', 'Assets/images/smallgarden1.png', 'exterior')" style="cursor:pointer;"><img src="Assets/images/smallgarden1.png" alt="Small Garden 1" loading="lazy"><h3>Small Garden 1</h3><p>VisualEyes Interiors</p></div>
+
+        <!-- Specialty (3 items) -->
+        <div class="portfolio-item fade-in" data-category="other" onclick="openDesignModal('Car Theme Bedroom', 'Assets/images/boysbedcartheme1.jpg', 'other')" style="cursor:pointer;"><img src="Assets/images/boysbedcartheme1.jpg" alt="Car Theme Bedroom" loading="lazy"><h3>Car Theme Bedroom</h3><p>VisualEyes Interiors</p></div>
+        <div class="portfolio-item fade-in" data-category="other" onclick="openDesignModal('Reading Corner', 'Assets/images/readingcorner1.png', 'other')" style="cursor:pointer;"><img src="Assets/images/readingcorner1.png" alt="Reading Corner" loading="lazy"><h3>Reading Corner</h3><p>VisualEyes Interiors</p></div>
+        <div class="portfolio-item fade-in" data-category="other" onclick="openDesignModal('Restaurant Interior', 'Assets/images/restinterior1.png', 'other')" style="cursor:pointer;"><img src="Assets/images/restinterior1.png" alt="Restaurant Interior" loading="lazy"><h3>Restaurant Interior</h3><p>VisualEyes Interiors</p></div>
       </div>
       
       <div style="text-align: center; margin-top: 40px;">
@@ -312,7 +329,7 @@
     <div class="container">
       <div class="pathways-header fade-in">
         <h2>Two pathways.<br><span>Every space covered.</span></h2>
-        <p>Pick where your project lives ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â we tailor the entire service around it.</p>
+        <p>Pick where your project lives ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â we tailor the entire service around it.</p>
       </div>
       
       <div class="pathways-toggle">
@@ -515,7 +532,7 @@
         <p class="form-label">What should we call you?</p>
         
         <div class="form-input-group">
-          <span class="icon">ÃƒÂ°Ã…Â¸Ã¢â‚¬ËœÃ‚Â¤</span>
+          <span class="icon">ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“Ãƒâ€šÃ‚Â¤</span>
           <input type="text" class="form-input" placeholder="Your name">
         </div>
         
@@ -535,7 +552,7 @@
         <h2>Every detail is intentional.<br>Every square foot has a purpose.</h2>
       </div>
       <div class="quote-attribution fade-in">
-        <p>Because true luxury isn't just what you see ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â it's what you feel every day.</p>
+        <p>Because true luxury isn't just what you see ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â it's what you feel every day.</p>
         <p>"Haris"</p>
       </div>
     </div>
@@ -1048,6 +1065,7 @@
 
 </body>
 </html>
+
 
 
 
