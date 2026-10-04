@@ -338,7 +338,7 @@
         <button onclick="togglePathway('commercial', this)">Commercial</button>
       </div>
       
-      <div class="pathways-grid">
+      <div class="pathways-grid" id="residentialGrid">
         <div class="pathway-card fade-in">
           <img src="Assets/images/livinganddiningspace2.png" alt="Villa Interior Design">
           <div class="pathway-card-content">
@@ -367,6 +367,40 @@
           <img src="Assets/images/livingrooms2.png" alt="Penthouse Design">
           <div class="pathway-card-content">
             <h4>Penthouse<br>Design Service</h4>
+            <span class="arrow">&#8594;</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pathways-grid" id="commercialGrid" style="display: none;">
+        <div class="pathway-card fade-in">
+          <img src="Assets/images/comm_1.jpg" alt="Office Interior Design">
+          <div class="pathway-card-content">
+            <h4>Office Interior<br>Design Service</h4>
+            <span class="arrow">&#8594;</span>
+          </div>
+        </div>
+        
+        <div class="pathway-card fade-in">
+          <img src="Assets/images/comm_2.jpg" alt="Retail Interior Design">
+          <div class="pathway-card-content">
+            <h4>Retail Interior<br>Design Service</h4>
+            <span class="arrow">&#8594;</span>
+          </div>
+        </div>
+        
+        <div class="pathway-card fade-in">
+          <img src="Assets/images/comm_3.jpg" alt="Restaurant Interior Design">
+          <div class="pathway-card-content">
+            <h4>Restaurant<br>Design Service</h4>
+            <span class="arrow">&#8594;</span>
+          </div>
+        </div>
+        
+        <div class="pathway-card fade-in">
+          <img src="Assets/images/comm_4.jpg" alt="Hotel Interior Design">
+          <div class="pathway-card-content">
+            <h4>Hotel Interior<br>Design Service</h4>
             <span class="arrow">&#8594;</span>
           </div>
         </div>
@@ -993,6 +1027,14 @@
     function togglePathway(type, btn) {
       document.querySelectorAll('.pathways-toggle button').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      
+      if (type === 'residential') {
+        document.getElementById('residentialGrid').style.display = 'grid';
+        document.getElementById('commercialGrid').style.display = 'none';
+      } else {
+        document.getElementById('residentialGrid').style.display = 'none';
+        document.getElementById('commercialGrid').style.display = 'grid';
+      }
     }
 
     // ===== 3D WALKTHROUGH =====
