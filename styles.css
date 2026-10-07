@@ -1948,12 +1948,13 @@ ul {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.faq-item.active { border-color: #333; }
-.faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: normal; font-size: 1.2rem; font-family: var(--font-serif); color: #333; }
+.faq-item.active { border-color: var(--gold); }
+.faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: normal; font-size: 1.2rem; font-family: var(--font-serif); color: #333; transition: color 0.3s ease; }
 .faq-question span {
   font-size: 1.5rem;
-  transition: transform 0.3s;
+  transition: transform 0.3s, color 0.3s ease;
 }
+.faq-item.active .faq-question { color: var(--gold); }
 .faq-item.active .faq-question span { transform: none; font-size: 2rem; line-height: 1; }
 .faq-answer {
   max-height: 0;
