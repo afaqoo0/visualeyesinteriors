@@ -84,68 +84,68 @@
       <div class="testimonials-slider" id="testimonialsSlider">
         <!-- Testimonial 1 -->
         <div class="testimonial-card" onclick="toggleVideoPlay(this)">
-          <video src="videos/kitchen first.mp4" autoplay loop muted playsinline poster="Assets/images/bedrooms2.png"></video>
+          <video src="videos/kitchen first.mp4" loop muted playsinline poster="Assets/images/bedrooms2.png"></video>
           <div class="testimonial-overlay">
             <div class="testimonial-quote">
-              "IT'S BEYOND<br><em>MY EXPECTATIONS</em>"
+              Kitchen Design<br><em>in Peshawar</em>
             </div>
             <div class="testimonial-play">
               <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
             </div>
             <div class="testimonial-info">
-              <h4>Home Transformation</h4>
-              <p>Sobha Hartland Waves, Peshawar</p>
+              <h4>Modern Kitchen</h4>
+              <p>VisualEyes Interiors</p>
             </div>
           </div>
         </div>
         
         <!-- Testimonial 2 -->
         <div class="testimonial-card" onclick="toggleVideoPlay(this)">
-          <video src="videos/indurstrial second.mp4" autoplay loop muted playsinline poster="Assets/images/bedrooms3.jpeg"></video>
+          <video src="videos/indurstrial second.mp4" loop muted playsinline poster="Assets/images/bedrooms3.jpeg"></video>
           <div class="testimonial-overlay">
             <div class="testimonial-quote">
-              "YOU OPTIMIZED THE SPACE &<br><em>MADE IT FUNCTIONAL</em>"
+              Living Room Design<br><em>in Peshawar</em>
             </div>
             <div class="testimonial-play">
               <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
             </div>
             <div class="testimonial-info">
-              <h4>Villa Interior Design</h4>
-              <p>Eden Valley Community, Peshawar</p>
+              <h4>Industrial Theme</h4>
+              <p>VisualEyes Interiors</p>
             </div>
           </div>
         </div>
         
         <!-- Testimonial 3 -->
         <div class="testimonial-card" onclick="toggleVideoPlay(this)">
-          <video src="videos/bedroom 3rd.mp4" autoplay loop muted playsinline poster="Assets/images/boysbedcartheme1.jpg"></video>
+          <video src="videos/bedroom 3rd.mp4" loop muted playsinline poster="Assets/images/boysbedcartheme1.jpg"></video>
           <div class="testimonial-overlay">
             <div class="testimonial-quote">
-              "IT'S MORE THAN<br><em>OUR EXPECTATIONS</em>"
+              Bedroom Design<br><em>in Peshawar</em>
             </div>
             <div class="testimonial-play">
               <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
             </div>
             <div class="testimonial-info">
-              <h4>Penthouse Interior Design</h4>
-              <p>Peshawar Hills Estate</p>
+              <h4>Luxury Bedroom</h4>
+              <p>VisualEyes Interiors</p>
             </div>
           </div>
         </div>
         
         <!-- Testimonial 4 -->
         <div class="testimonial-card" onclick="toggleVideoPlay(this)">
-          <video src="videos/commercial video 4th.mp4" autoplay loop muted playsinline poster="Assets/images/mirror_5.png"></video>
+          <video src="videos/commercial video 4th.mp4" loop muted playsinline poster="Assets/images/mirror_5.png"></video>
           <div class="testimonial-overlay">
             <div class="testimonial-quote">
-              "ABSOLUTELY<br><em>STUNNING WORK</em>"
+              Exterior Design<br><em>in Peshawar</em>
             </div>
             <div class="testimonial-play">
               <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
             </div>
             <div class="testimonial-info">
-              <h4>Apartment Design</h4>
-              <p>Marina Gate, Peshawar Marina</p>
+              <h4>Commercial Space</h4>
+              <p>VisualEyes Interiors</p>
             </div>
           </div>
         </div>
@@ -1015,20 +1015,25 @@
       const playBtn = card.querySelector('.testimonial-play');
       if (!video) return;
 
-      if (video.muted) {
+      if (video.paused) {
+        // Pause all other videos
         document.querySelectorAll('.testimonial-card video').forEach(v => {
-          v.muted = true;
+          if (v !== video) {
+            v.pause();
+            const otherBtn = v.parentElement.querySelector('.testimonial-play');
+            if(otherBtn) {
+              otherBtn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
+            }
+          }
         });
-        document.querySelectorAll('.testimonial-play').forEach(btn => {
-          btn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
-        });
+        
         video.muted = false;
         video.play();
         if (playBtn) {
           playBtn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
         }
       } else {
-        video.muted = true;
+        video.pause();
         if (playBtn) {
           playBtn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
         }
