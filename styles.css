@@ -1650,10 +1650,10 @@ ul {
 
 /* Detailed Footer Update */
 .footer-pre {
-  background: var(--light-bg);
-  color: #000;
+  background: #111;
+  color: var(--gold);
   padding: 20px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #333;
 }
 
 .footer-pre p {
@@ -1662,24 +1662,24 @@ ul {
 }
 
 .footer {
-  background: var(--light-bg);
-  color: #000;
+  background: #111;
+  color: #fff;
 }
 
 .footer .logo-text {
-  color: #000;
+  color: #fff;
 }
 
 .footer p {
-  color: #000;
+  color: #ccc;
 }
 
 .footer h4 {
-  color: #000;
+  color: var(--gold);
 }
 
 .footer a {
-  color: var(--gray);
+  color: #ccc;
 }
 
 .footer-col a:hover {
@@ -1687,7 +1687,7 @@ ul {
 }
 
 .footer-bottom-areas {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #333;
   padding-top: 24px;
   margin-top: 40px;
 }
@@ -1695,12 +1695,12 @@ ul {
 .footer-bottom-areas p,
 .footer-bottom-areas a {
   font-size: 0.75rem;
-  color: var(--gray);
+  color: #aaa;
   line-height: 1.8;
 }
 
 .footer-bottom-areas h4 {
-  color: var(--dark) !important;
+  color: var(--gold) !important;
 }
 
 .footer-grid {
