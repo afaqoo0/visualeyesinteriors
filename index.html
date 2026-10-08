@@ -83,8 +83,8 @@
     <div class="container">
       <div class="testimonials-slider" id="testimonialsSlider">
         <!-- Testimonial 1 -->
-        <div class="testimonial-card">
-          <img src="Assets/images/bedrooms2.png" alt="Home Transformation">
+        <div class="testimonial-card" onclick="toggleVideoPlay(this)">
+          <video src="videos/kitchen first.mp4" autoplay loop muted playsinline poster="Assets/images/bedrooms2.png"></video>
           <div class="testimonial-overlay">
             <div class="testimonial-quote">
               "IT'S BEYOND<br><em>MY EXPECTATIONS</em>"
@@ -100,8 +100,8 @@
         </div>
         
         <!-- Testimonial 2 -->
-        <div class="testimonial-card">
-          <img src="Assets/images/bedrooms3.jpeg" alt="Villa Interior Design">
+        <div class="testimonial-card" onclick="toggleVideoPlay(this)">
+          <video src="videos/indurstrial second.mp4" autoplay loop muted playsinline poster="Assets/images/bedrooms3.jpeg"></video>
           <div class="testimonial-overlay">
             <div class="testimonial-quote">
               "YOU OPTIMIZED THE SPACE &<br><em>MADE IT FUNCTIONAL</em>"
@@ -117,8 +117,8 @@
         </div>
         
         <!-- Testimonial 3 -->
-        <div class="testimonial-card">
-          <img src="Assets/images/boysbedcartheme1.jpg" alt="Penthouse Interior Design">
+        <div class="testimonial-card" onclick="toggleVideoPlay(this)">
+          <video src="videos/bedroom 3rd.mp4" autoplay loop muted playsinline poster="Assets/images/boysbedcartheme1.jpg"></video>
           <div class="testimonial-overlay">
             <div class="testimonial-quote">
               "IT'S MORE THAN<br><em>OUR EXPECTATIONS</em>"
@@ -134,8 +134,8 @@
         </div>
         
         <!-- Testimonial 4 -->
-        <div class="testimonial-card">
-          <img src="Assets/images/mirror_5.png" alt="Apartment Design">
+        <div class="testimonial-card" onclick="toggleVideoPlay(this)">
+          <video src="videos/commercial video 4th.mp4" autoplay loop muted playsinline poster="Assets/images/mirror_5.png"></video>
           <div class="testimonial-overlay">
             <div class="testimonial-quote">
               "ABSOLUTELY<br><em>STUNNING WORK</em>"
@@ -1012,6 +1012,31 @@
       const slider = document.getElementById('testimonialsSlider');
       const cardWidth = slider.querySelector('.testimonial-card').offsetWidth + 20;
       slider.scrollBy({ left: dir * cardWidth, behavior: 'smooth' });
+    }
+
+    function toggleVideoPlay(card) {
+      const video = card.querySelector('video');
+      const playBtn = card.querySelector('.testimonial-play');
+      if (!video) return;
+
+      if (video.muted) {
+        document.querySelectorAll('.testimonial-card video').forEach(v => {
+          v.muted = true;
+        });
+        document.querySelectorAll('.testimonial-play').forEach(btn => {
+          btn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
+        });
+        video.muted = false;
+        video.play();
+        if (playBtn) {
+          playBtn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
+        }
+      } else {
+        video.muted = true;
+        if (playBtn) {
+          playBtn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
+        }
+      }
     }
 
     // ===== PORTFOLIO FILTER =====
