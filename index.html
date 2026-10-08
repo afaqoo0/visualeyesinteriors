@@ -259,7 +259,6 @@
         <button onclick="filterPortfolio('living', this)">Living &amp; Dining</button>
         <button onclick="filterPortfolio('kitchen', this)">Kitchen</button>
         <button onclick="filterPortfolio('exterior', this)">Exterior &amp; Garden</button>
-        <button onclick="filterPortfolio('other', this)">Specialty</button>
       </div>
       
       <div class="portfolio-grid portfolio-masonry">
@@ -283,10 +282,6 @@
         <div class="portfolio-item fade-in" data-category="exterior" onclick="openDesignModal('Exterior Design 2', 'Assets/images/exteriordesign2.png', 'exterior')" style="cursor:pointer;"><img src="Assets/images/exteriordesign2.png" alt="Exterior Design 2" loading="lazy"><h3>Exterior Design 2</h3><p>VisualEyes Interiors</p></div>
         <div class="portfolio-item fade-in" data-category="exterior" onclick="openDesignModal('Small Garden 1', 'Assets/images/smallgarden1.png', 'exterior')" style="cursor:pointer;"><img src="Assets/images/smallgarden1.png" alt="Small Garden 1" loading="lazy"><h3>Small Garden 1</h3><p>VisualEyes Interiors</p></div>
 
-        <!-- Specialty (3 items) -->
-        <div class="portfolio-item fade-in" data-category="other" onclick="openDesignModal('Car Theme Bedroom', 'Assets/images/boysbedcartheme1.jpg', 'other')" style="cursor:pointer;"><img src="Assets/images/boysbedcartheme1.jpg" alt="Car Theme Bedroom" loading="lazy"><h3>Car Theme Bedroom</h3><p>VisualEyes Interiors</p></div>
-        <div class="portfolio-item fade-in" data-category="other" onclick="openDesignModal('Reading Corner', 'Assets/images/readingcorner1.png', 'other')" style="cursor:pointer;"><img src="Assets/images/readingcorner1.png" alt="Reading Corner" loading="lazy"><h3>Reading Corner</h3><p>VisualEyes Interiors</p></div>
-        <div class="portfolio-item fade-in" data-category="other" onclick="openDesignModal('Restaurant Interior', 'Assets/images/restinterior1.png', 'other')" style="cursor:pointer;"><img src="Assets/images/restinterior1.png" alt="Restaurant Interior" loading="lazy"><h3>Restaurant Interior</h3><p>VisualEyes Interiors</p></div>
       </div>
       
       <div style="text-align: center; margin-top: 40px;">
@@ -948,15 +943,14 @@
       bedrooms: "This luxurious bedroom design by VisualEyes Interiors blends modern comfort with elegant aesthetics. Features include premium materials, custom lighting, and bespoke furniture tailored to your personal style.",
       living: "An open-concept living and dining space designed to maximize natural light and create a warm, inviting atmosphere. Every element is carefully curated for both beauty and functionality.",
       kitchen: "A modern kitchen designed with premium finishes, efficient layouts, and state-of-the-art appliances. Combining style with practicality for the heart of your home.",
-      exterior: "Stunning exterior and garden designs that create a lasting first impression. From architectural facades to landscaped outdoor spaces, we bring your vision to life.",
-      other: "A unique specialty space designed with creativity and precision. Whether it is a reading corner, kids theme room, or relaxation area, we craft spaces that inspire."
+      exterior: "Stunning exterior and garden designs that create a lasting first impression. From architectural facades to landscaped outdoor spaces, we bring your vision to life."
     };
 
     function openDesignModal(title, imgSrc, category) {
       document.getElementById('modalImage').src = imgSrc;
       document.getElementById('modalTitle').textContent = title;
-      document.getElementById('modalCategory').textContent = category.replace('living', 'Living & Dining').replace('bedrooms', 'Bedrooms').replace('kitchen', 'Kitchen').replace('exterior', 'Exterior & Garden').replace('other', 'Specialty');
-      document.getElementById('modalDesc').textContent = designDescriptions[category] || designDescriptions['other'];
+      document.getElementById('modalCategory').textContent = category.replace('living', 'Living & Dining').replace('bedrooms', 'Bedrooms').replace('kitchen', 'Kitchen').replace('exterior', 'Exterior & Garden');
+      document.getElementById('modalDesc').textContent = designDescriptions[category] || designDescriptions['bedrooms'];
       document.getElementById('designModal').style.display = 'flex';
       document.body.style.overflow = 'hidden';
     }
