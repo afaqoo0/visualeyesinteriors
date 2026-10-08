@@ -54,22 +54,7 @@
         </button>
       </div>
       <div class="hero-image fade-in">
-        <div class="hero-slider-container">
-          <div class="hero-slide active">
-            <img src="Assets/images/hero_slide1.jpg" alt="Luxury Master Bedroom">
-          </div>
-          <div class="hero-slide">
-            <img src="Assets/images/hero_slide2.jpg" alt="Luxury Sitting Area 1">
-          </div>
-          <div class="hero-slide">
-            <img src="Assets/images/hero_slide3.jpg" alt="Luxury Sitting Area 2">
-          </div>
-          <div class="hero-slider-dots">
-            <span class="dot active" onclick="setHeroSlide(0)"></span>
-            <span class="dot" onclick="setHeroSlide(1)"></span>
-            <span class="dot" onclick="setHeroSlide(2)"></span>
-          </div>
-        </div>
+        <video src="videos/commercial video 4th.mp4" controls autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;"></video>
         <div class="hero-badge">
           <div class="number">10+</div>
           <div class="label">Years of<br>Craft</div>
@@ -923,25 +908,7 @@
 
   <!-- ===== JAVASCRIPT ===== -->
   <script>
-    // ===== HERO SLIDER =====
-    let currentHeroSlide = 0;
-    function showHeroSlide(index) {
-      const slides = document.querySelectorAll('.hero-slide');
-      const dots = document.querySelectorAll('.hero-slider-dots .dot');
-      if (!slides.length) return;
-      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-      currentHeroSlide = index;
-    }
-    function nextHeroSlide() {
-      const slides = document.querySelectorAll('.hero-slide');
-      if (!slides.length) return;
-      showHeroSlide((currentHeroSlide + 1) % slides.length);
-    }
-    function setHeroSlide(index) {
-      showHeroSlide(index);
-    }
-    setInterval(nextHeroSlide, 4000);
+    // ===== HERO SLIDER REMOVED =====
 
     // ===== DESIGN MODAL =====
     const designDescriptions = {
