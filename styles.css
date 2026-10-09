@@ -1722,6 +1722,33 @@ ul {
   gap: 12px;
 }
 
+/* Social Buttons Hover & Movement Animations */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1c1c1c;
+  color: #c9a84c;
+  border: 1px solid #333;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-btn:hover {
+  transform: translateY(-5px) scale(1.1);
+  background: var(--gold, #c9a84c);
+  color: #111;
+  border-color: var(--gold, #c9a84c);
+  box-shadow: 0 8px 18px rgba(201, 168, 76, 0.35);
+}
+
+.social-btn:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
 /* ===== WHATSAPP FAB ===== */
 .whatsapp-fab {
   position: fixed;
