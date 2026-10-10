@@ -1619,19 +1619,43 @@ ul {
   gap: 24px;
 }
 
+.luxury-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 179, 0, 0.12);
+  color: var(--gold);
+  border: 1px solid rgba(255, 179, 0, 0.3);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.guarantee-point:hover .luxury-icon-badge,
+.deliverable-item:hover .luxury-icon-badge {
+  background: var(--gold);
+  color: #000;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(255, 179, 0, 0.35);
+}
+
 .guarantee-point h4 {
   font-family: var(--font-heading);
   font-size: 1.1rem;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .guarantee-point p {
   font-size: 0.85rem;
   color: var(--gray);
-  padding-left: 30px;
+  padding-left: 48px;
 }
 
 .guarantee-image {
