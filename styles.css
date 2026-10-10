@@ -2376,3 +2376,264 @@ body { overflow-x: hidden; }
   .testimonial-card { flex: 0 0 92vw; }
   .faq-question { font-size: 0.88rem; }
 }
+
+/* ==========================================================================
+   THEME SUPPORT: FULL BLACK THEME & FULL YELLOW THEME
+   ========================================================================== */
+
+/* Theme Switcher Floating Widget */
+.theme-switcher-widget {
+  position: fixed;
+  bottom: 95px;
+  right: 24px;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 8px 12px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 998;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.theme-switcher-widget span {
+  font-size: 0.72rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 4px;
+}
+
+.theme-pill-btn {
+  border: 2px solid transparent;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.theme-pill-btn.theme-default {
+  background: #f5f5f5;
+  color: #111;
+}
+
+.theme-pill-btn.theme-black {
+  background: #0a0a0a;
+  color: #FFB300;
+  border-color: #333;
+}
+
+.theme-pill-btn.theme-yellow {
+  background: #FFB300;
+  color: #000;
+}
+
+.theme-pill-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.theme-pill-btn.active {
+  border-color: #FFB300 !important;
+  box-shadow: 0 0 10px rgba(255, 179, 0, 0.6);
+}
+
+/* =========================================
+   1. FULL LUXURY BLACK THEME (DARK / NOIR)
+   ========================================= */
+body.theme-full-black {
+  background: #0a0a0a !important;
+  color: #e5e5e5 !important;
+}
+
+body.theme-full-black .header {
+  background: rgba(12, 12, 12, 0.96) !important;
+  border-bottom: 1px solid #222 !important;
+}
+
+body.theme-full-black .nav-links a {
+  color: #e5e5e5 !important;
+}
+
+body.theme-full-black .nav-links a:hover {
+  color: var(--gold) !important;
+}
+
+body.theme-full-black .hero,
+body.theme-full-black .services,
+body.theme-full-black .portfolio,
+body.theme-full-black .cost-calculator,
+body.theme-full-black .pathways,
+body.theme-full-black .team,
+body.theme-full-black .process,
+body.theme-full-black .designed-spaces,
+body.theme-full-black .walkthrough,
+body.theme-full-black .client-stories,
+body.theme-full-black .guarantee-deliverables,
+body.theme-full-black .faq,
+body.theme-full-black .contact,
+body.theme-full-black .founder-note-2 {
+  background: #0a0a0a !important;
+  color: #e5e5e5 !important;
+}
+
+body.theme-full-black .hero-title,
+body.theme-full-black .section-title,
+body.theme-full-black h1,
+body.theme-full-black h2,
+body.theme-full-black h3,
+body.theme-full-black h4 {
+  color: #ffffff !important;
+}
+
+body.theme-full-black p,
+body.theme-full-black span,
+body.theme-full-black li {
+  color: #b5b5b5 !important;
+}
+
+/* Cards & Containers in Black Theme */
+body.theme-full-black .service-card,
+body.theme-full-black .pathway-card,
+body.theme-full-black .process-card,
+body.theme-full-black .stat,
+body.theme-full-black .deliverables-grid,
+body.theme-full-black .review-image-card,
+body.theme-full-black .faq-item,
+body.theme-full-black .team-card,
+body.theme-full-black .calculator-box,
+body.theme-full-black .contact-form,
+body.theme-full-black .guarantee-point {
+  background: #141414 !important;
+  border: 1px solid #262626 !important;
+  color: #e5e5e5 !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6) !important;
+}
+
+body.theme-full-black .hero-badge {
+  background: #181818 !important;
+  border: 1px solid #333 !important;
+  color: #fff !important;
+}
+
+body.theme-full-black .hero-badge .number {
+  color: var(--gold) !important;
+}
+
+body.theme-full-black .portfolio-tabs button {
+  background: #181818 !important;
+  color: #ccc !important;
+  border: 1px solid #333 !important;
+}
+
+body.theme-full-black .portfolio-tabs button.active {
+  background: var(--gold) !important;
+  color: #000 !important;
+}
+
+body.theme-full-black .calc-input,
+body.theme-full-black select,
+body.theme-full-black input,
+body.theme-full-black textarea {
+  background: #1b1b1b !important;
+  color: #ffffff !important;
+  border: 1px solid #333 !important;
+}
+
+body.theme-full-black .faq-item.active {
+  border-color: var(--gold) !important;
+}
+
+body.theme-full-black .reviews-nav-btn {
+  background: #1c1c1c !important;
+  color: #fff !important;
+  border-color: #333 !important;
+}
+
+body.theme-full-black .reviews-nav-btn:hover {
+  background: var(--gold) !important;
+  color: #000 !important;
+}
+
+/* =========================================
+   2. FULL VIBRANT YELLOW THEME (GOLDEN LUXE)
+   ========================================= */
+body.theme-full-yellow {
+  background: #FFF9E6 !important;
+  color: #2b1f00 !important;
+}
+
+body.theme-full-yellow .header {
+  background: rgba(255, 235, 160, 0.96) !important;
+  border-bottom: 2px solid #FFB300 !important;
+}
+
+body.theme-full-yellow .hero,
+body.theme-full-yellow .services,
+body.theme-full-yellow .portfolio,
+body.theme-full-yellow .cost-calculator,
+body.theme-full-yellow .pathways,
+body.theme-full-yellow .team,
+body.theme-full-yellow .process,
+body.theme-full-yellow .designed-spaces,
+body.theme-full-yellow .walkthrough,
+body.theme-full-yellow .client-stories,
+body.theme-full-yellow .guarantee-deliverables,
+body.theme-full-yellow .faq,
+body.theme-full-yellow .contact,
+body.theme-full-yellow .founder-note-2 {
+  background: #FFF9E6 !important;
+  color: #2b1f00 !important;
+}
+
+body.theme-full-yellow .hero-title,
+body.theme-full-yellow .section-title,
+body.theme-full-yellow h1,
+body.theme-full-yellow h2,
+body.theme-full-yellow h3,
+body.theme-full-yellow h4 {
+  color: #1a1200 !important;
+}
+
+body.theme-full-yellow .section-tag,
+body.theme-full-yellow .hero-tag {
+  color: #B27B00 !important;
+}
+
+body.theme-full-yellow .service-card,
+body.theme-full-yellow .pathway-card,
+body.theme-full-yellow .process-card,
+body.theme-full-yellow .stat,
+body.theme-full-yellow .deliverables-grid,
+body.theme-full-yellow .review-image-card,
+body.theme-full-yellow .faq-item,
+body.theme-full-yellow .team-card,
+body.theme-full-yellow .calculator-box,
+body.theme-full-yellow .contact-form,
+body.theme-full-yellow .guarantee-point {
+  background: #FFF2C2 !important;
+  border: 1px solid #FFE082 !important;
+  color: #1f1400 !important;
+  box-shadow: 0 6px 20px rgba(179, 120, 0, 0.12) !important;
+}
+
+body.theme-full-yellow .btn-book,
+body.theme-full-yellow .hero-cta,
+body.theme-full-yellow .btn-gold {
+  background: #000000 !important;
+  color: #FFB300 !important;
+}
+
+body.theme-full-yellow .footer {
+  background: #1c1500 !important;
+  border-top: 3px solid #FFB300 !important;
+}
+

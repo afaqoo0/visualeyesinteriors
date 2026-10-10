@@ -894,6 +894,14 @@
     </div>
   </footer>
 
+  <!-- ===== THEME SWITCHER WIDGET ===== -->
+  <div class="theme-switcher-widget">
+    <span>Theme:</span>
+    <button class="theme-pill-btn theme-default" onclick="setTheme('default')" id="btnThemeDefault">Default</button>
+    <button class="theme-pill-btn theme-black" onclick="setTheme('black')" id="btnThemeBlack">&#9679; Black</button>
+    <button class="theme-pill-btn theme-yellow" onclick="setTheme('yellow')" id="btnThemeYellow">&#9679; Yellow</button>
+  </div>
+
   <!-- ===== WHATSAPP FAB ===== -->
   <a href="https://wa.me/923339333978" class="whatsapp-fab" target="_blank" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -1151,6 +1159,34 @@
 
     const statsRow = document.querySelector('.stats-row');
     if (statsRow) statsObserver.observe(statsRow);
+
+    // ===== THEME CONTROLLER =====
+    function setTheme(theme) {
+      document.body.classList.remove('theme-full-black', 'theme-full-yellow');
+      document.querySelectorAll('.theme-pill-btn').forEach(btn => btn.classList.remove('active'));
+
+      if (theme === 'black') {
+        document.body.classList.add('theme-full-black');
+        const btn = document.getElementById('btnThemeBlack');
+        if (btn) btn.classList.add('active');
+        localStorage.setItem('ve_theme', 'black');
+      } else if (theme === 'yellow') {
+        document.body.classList.add('theme-full-yellow');
+        const btn = document.getElementById('btnThemeYellow');
+        if (btn) btn.classList.add('active');
+        localStorage.setItem('ve_theme', 'yellow');
+      } else {
+        const btn = document.getElementById('btnThemeDefault');
+        if (btn) btn.classList.add('active');
+        localStorage.setItem('ve_theme', 'default');
+      }
+    }
+
+    // Initialize saved theme or set to black for preview
+    (function initTheme() {
+      const savedTheme = localStorage.getItem('ve_theme') || 'black';
+      setTheme(savedTheme);
+    })();
   </script>
 
 
