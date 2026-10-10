@@ -651,50 +651,29 @@
         </div>
       </div>
       
-      <div class="google-reviews">
-        <div class="review-card">
-          <div class="review-header">
-            <div class="review-avatar">eu</div>
-            <div>
-              <strong>VisualEyes Interiors</strong>
-              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0</div>
-            </div>
+      <div class="reviews-slider-wrapper">
+        <button class="reviews-nav-btn prev" onclick="scrollReviews(-1)" aria-label="Previous reviews">&#8592;</button>
+        <div class="reviews-scroll-container" id="reviewsScrollContainer">
+          <div class="review-image-card">
+            <img src="reviews/1imp.png" alt="Google Review 1">
           </div>
-          <p class="review-text">33 reviews<br><br>G review us on google</p>
-        </div>
-        <div class="review-card">
-          <div class="review-header">
-            <div class="review-avatar">M</div>
-            <div>
-              <strong>Mujahid ali</strong><br>
-              <span style="font-size:0.7rem; color:var(--gray);">in the last week</span>
-            </div>
+          <div class="review-image-card">
+            <img src="reviews/2imp.png" alt="Google Review 2">
           </div>
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">This is best team to work with. got a very good experience...</p>
-        </div>
-        <div class="review-card">
-          <div class="review-header">
-            <div class="review-avatar">S</div>
-            <div>
-              <strong>Shahnawaz ahmed</strong><br>
-              <span style="font-size:0.7rem; color:var(--gray);">3 weeks ago</span>
-            </div>
+          <div class="review-image-card">
+            <img src="reviews/3.png" alt="Google Review 3">
           </div>
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">I had a fantastic experience with VisualEyes Interiors designing my apartment...</p>
-        </div>
-        <div class="review-card">
-          <div class="review-header">
-            <div class="review-avatar">A</div>
-            <div>
-              <strong>Ahmed</strong><br>
-              <span style="font-size:0.7rem; color:var(--gray);">1 month ago</span>
-            </div>
+          <div class="review-image-card">
+            <img src="reviews/4.png" alt="Google Review 4">
           </div>
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-text">Had a very good experience working with this interior design team...</p>
+          <div class="review-image-card">
+            <img src="reviews/5.png" alt="Google Review 5">
+          </div>
+          <div class="review-image-card">
+            <img src="reviews/6.png" alt="Google Review 6">
+          </div>
         </div>
+        <button class="reviews-nav-btn next" onclick="scrollReviews(1)" aria-label="Next reviews">&#8594;</button>
       </div>
     </div>
   </section>
@@ -1102,6 +1081,14 @@
     function scrollGallery(dir) {
       const gallery = document.querySelector('.spaces-gallery');
       gallery.scrollBy({ left: dir * 300, behavior: 'smooth' });
+    }
+
+    // ===== REVIEWS SCROLL =====
+    function scrollReviews(dir) {
+      const container = document.getElementById('reviewsScrollContainer');
+      if (container) {
+        container.scrollBy({ left: dir * 380, behavior: 'smooth' });
+      }
     }
 
     // ===== INTERSECTION OBSERVER FOR ANIMATIONS =====
