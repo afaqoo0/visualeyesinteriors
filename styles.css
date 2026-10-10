@@ -1623,24 +1623,60 @@ ul {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
-  min-height: 36px;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
   border-radius: 50%;
-  background: rgba(255, 179, 0, 0.12);
-  color: var(--gold);
-  border: 1px solid rgba(255, 179, 0, 0.3);
+  background: #f2efe9;
+  color: #000000 !important;
+  border: 1px solid #dfd9ce;
   flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
+.luxury-icon-badge svg {
+  stroke: #000000 !important;
+  color: #000000 !important;
+}
+
 .guarantee-point:hover .luxury-icon-badge,
 .deliverable-item:hover .luxury-icon-badge {
-  background: var(--gold);
-  color: #000;
+  background: #000000;
+  color: #ffffff !important;
+  border-color: #000000;
   transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(255, 179, 0, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.guarantee-point:hover .luxury-icon-badge svg,
+.deliverable-item:hover .luxury-icon-badge svg {
+  stroke: #ffffff !important;
+  color: #ffffff !important;
+}
+
+body.theme-full-black .luxury-icon-badge {
+  background: #222222;
+  color: #ffffff !important;
+  border-color: #333333;
+}
+
+body.theme-full-black .luxury-icon-badge svg {
+  stroke: #ffffff !important;
+  color: #ffffff !important;
+}
+
+body.theme-full-black .guarantee-point:hover .luxury-icon-badge,
+body.theme-full-black .deliverable-item:hover .luxury-icon-badge {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #000000 !important;
+}
+
+body.theme-full-black .guarantee-point:hover .luxury-icon-badge svg,
+body.theme-full-black .deliverable-item:hover .luxury-icon-badge svg {
+  stroke: #000000 !important;
+  color: #000000 !important;
 }
 
 .guarantee-point h4 {
