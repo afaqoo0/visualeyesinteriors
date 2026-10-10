@@ -2717,3 +2717,247 @@ body.theme-full-yellow .footer {
   border-top: 3px solid #FFB300 !important;
 }
 
+/* ===== STUDIO LOCATION & MAP ===== */
+.studio-location {
+  padding: 80px 0;
+  background: var(--off-white, #f9f9f9);
+}
+
+.location-wrapper {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.location-info-card {
+  background: #ffffff;
+  padding: 36px 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.location-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.location-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #000000;
+  color: var(--gold, #c9a84c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.location-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #111111;
+}
+
+.location-header p {
+  font-size: 0.82rem;
+  color: #888888;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.location-details {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-item .detail-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: #c9a84c;
+  margin-bottom: 6px;
+}
+
+.detail-item .detail-value {
+  font-size: 0.92rem;
+  color: #333333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.detail-item .detail-value a {
+  color: #111111;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.detail-item .detail-value a:hover {
+  color: #c9a84c;
+}
+
+.location-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.btn-directions {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #000000;
+  color: #ffffff;
+  padding: 13px 18px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-directions:hover {
+  background: #c9a84c;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp-visit {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #111111;
+  border: 1.5px solid #111111;
+  padding: 13px 18px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp-visit:hover {
+  background: #111111;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.location-map-container {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  min-height: 440px;
+  background: #eaeaea;
+}
+
+.location-map-container iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  display: block;
+}
+
+/* Black Theme */
+body.theme-full-black .studio-location {
+  background: #0a0a0a !important;
+}
+body.theme-full-black .location-info-card {
+  background: #141414 !important;
+  border-color: #262626 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+body.theme-full-black .location-header {
+  border-bottom-color: #262626 !important;
+}
+body.theme-full-black .location-header h3 {
+  color: #ffffff !important;
+}
+body.theme-full-black .location-header p {
+  color: #888888 !important;
+}
+body.theme-full-black .detail-item .detail-value {
+  color: #cccccc !important;
+}
+body.theme-full-black .detail-item .detail-value a {
+  color: #ffffff !important;
+}
+body.theme-full-black .location-actions {
+  border-top-color: #262626 !important;
+}
+body.theme-full-black .btn-directions {
+  background: var(--gold) !important;
+  color: #000000 !important;
+}
+body.theme-full-black .btn-whatsapp-visit {
+  color: #ffffff !important;
+  border-color: #444444 !important;
+}
+body.theme-full-black .btn-whatsapp-visit:hover {
+  border-color: var(--gold) !important;
+  color: var(--gold) !important;
+}
+body.theme-full-black .location-map-container {
+  border-color: #262626 !important;
+}
+
+/* Yellow Theme */
+body.theme-full-yellow .studio-location {
+  background: #FFF9E6 !important;
+}
+body.theme-full-yellow .location-info-card {
+  background: #FFF2C2 !important;
+  border-color: #FFE082 !important;
+}
+body.theme-full-yellow .location-header {
+  border-bottom-color: #FFE082 !important;
+}
+body.theme-full-yellow .location-header h3 {
+  color: #1a1200 !important;
+}
+body.theme-full-yellow .location-actions {
+  border-top-color: #FFE082 !important;
+}
+body.theme-full-yellow .btn-directions {
+  background: #000000 !important;
+  color: #FFB300 !important;
+}
+body.theme-full-yellow .btn-whatsapp-visit {
+  color: #1a1200 !important;
+  border-color: #1a1200 !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .location-wrapper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .location-map-container {
+    min-height: 350px;
+  }
+  .location-map-container iframe {
+    min-height: 350px;
+  }
+}
+
