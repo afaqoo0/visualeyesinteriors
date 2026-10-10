@@ -24,10 +24,10 @@
       </a>
       
       <nav class="nav-links" id="navLinks">
-        <a href="#services" class="dropdown">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#process">Blogs</a>
-        <a href="#founder">About</a>
+        <a href="#services" onclick="event.preventDefault(); scrollToSection('services');">Services</a>
+        <a href="#portfolio" onclick="event.preventDefault(); scrollToSection('portfolio');">Portfolio</a>
+        <a href="#process" onclick="event.preventDefault(); scrollToSection('process');">Process</a>
+        <a href="#founder" onclick="event.preventDefault(); scrollToSection('founder');">About</a>
         <button class="btn-book" onclick="scrollToSection('contact')">Book consultation</button>
       </nav>
       
@@ -861,26 +861,26 @@
         
         <div class="footer-col">
           <h4 style="margin-bottom: 12px;">Quick links</h4>
-          <a href="#contact" style="text-decoration: none; font-size: 0.9rem;">Contact us</a>
-          <a href="#founder" style="text-decoration: none; font-size: 0.9rem;">About us</a>
+          <a href="#contact" onclick="event.preventDefault(); scrollToSection('contact');" style="text-decoration: none; font-size: 0.9rem; cursor: pointer;">Contact us</a>
+          <a href="#founder" onclick="event.preventDefault(); scrollToSection('founder');" style="text-decoration: none; font-size: 0.9rem; cursor: pointer;">About us</a>
           <a href="portfolio.html" style="text-decoration: none; font-size: 0.9rem;">Our portfolio</a>
-          <a href="#calculator" style="text-decoration: none; font-size: 0.9rem;">Estimate interior design cost</a>
-          <a href="#process" style="text-decoration: none; font-size: 0.9rem;">Customer journey</a>
+          <a href="#calculator" onclick="event.preventDefault(); scrollToSection('calculator');" style="text-decoration: none; font-size: 0.9rem; cursor: pointer;">Estimate interior design cost</a>
+          <a href="#process" onclick="event.preventDefault(); scrollToSection('process');" style="text-decoration: none; font-size: 0.9rem; cursor: pointer;">Customer journey</a>
         </div>
         
         <div class="footer-col">
           <h4 style="margin-bottom: 12px;">Useful links</h4>
-          <a href="#contact" style="text-decoration: none; font-size: 0.9rem;">Career</a>
-          <a href="#team" style="text-decoration: none; font-size: 0.9rem;">Our Team</a>
-          <a href="#contact" style="text-decoration: none; font-size: 0.9rem;">Supplies &amp; vendors</a>
+          <a href="#contact" onclick="event.preventDefault(); scrollToSection('contact');" style="text-decoration: none; font-size: 0.9rem; cursor: pointer;">Career</a>
+          <a href="#team" onclick="event.preventDefault(); scrollToSection('team');" style="text-decoration: none; font-size: 0.9rem; cursor: pointer;">Our Team</a>
+          <a href="#contact" onclick="event.preventDefault(); scrollToSection('contact');" style="text-decoration: none; font-size: 0.9rem; cursor: pointer;">Supplies &amp; vendors</a>
           <a href="https://wa.me/923339333978?text=Check%20out%20VisualEyes%20Interiors!" target="_blank" style="text-decoration: none; font-size: 0.9rem;">Tell a friend</a>
-          <a href="#walkthrough" style="text-decoration: none; font-size: 0.9rem;">360 View</a>
+          <a href="#walkthrough" onclick="event.preventDefault(); scrollToSection('walkthrough');" style="text-decoration: none; font-size: 0.9rem; cursor: pointer;">360 View</a>
         </div>
         
         <div class="footer-col">
           <h4 style="margin-bottom: 12px;">Contact us</h4>
           <a href="tel:+923339333978" style="text-decoration: none; font-size: 0.9rem;">&#128222; 03339333978</a>
-          <a href="#contact" style="text-decoration: none; font-size: 0.9rem;">&#128205; Deans Plaza, Peshawar, Pakistan</a>
+          <a href="#contact" onclick="event.preventDefault(); scrollToSection('contact');" style="text-decoration: none; font-size: 0.9rem; cursor: pointer;">&#128205; Deans Plaza, Peshawar, Pakistan</a>
           <a href="mailto:sales@visualeyes.com" style="text-decoration: none; font-size: 0.9rem;">&#9993; sales@visualeyes.com</a>
         </div>
       </div>
@@ -999,7 +999,20 @@
     function scrollToSection(id) {
       const el = document.getElementById(id);
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const header = document.getElementById('header');
+        const headerHeight = header ? header.offsetHeight : 70;
+        const targetPosition = el.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+        // Close mobile menu if open
+        const nav = document.getElementById('navLinks');
+        const hamburger = document.getElementById('hamburger');
+        if (nav && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          if (hamburger) hamburger.classList.remove('active');
+        }
       }
     }
 
